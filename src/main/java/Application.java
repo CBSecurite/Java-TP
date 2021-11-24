@@ -8,9 +8,9 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Champions chevallier = new Chevallier("Serval", 20, 5, false, false);
-        Champions archer = new Archer("Ramone", 18, 15, false, false);
-        Champions mage = new Mage("Yaloupe", 15, 7, true, false);
+        Champions chevallier = new Chevallier("Serval", 30, 5, false, false);
+        Champions archer = new Archer("Ramone", 25, 10, false, false);
+        Champions mage = new Mage("Yaloupe", 15, 5, true, false);
 
         List<Champions> championsList = new ArrayList<>();
         championsList.add(chevallier);
