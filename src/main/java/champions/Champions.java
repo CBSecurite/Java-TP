@@ -3,11 +3,13 @@ package champions;
 public abstract class Champions implements IChampions {
 
     private String name;
+    private String typeChampion;
     private int force;
     private int defense;
     private int life = 100;
     private boolean soin = false;
     private boolean protection = false;
+    private boolean doubleAtaque = false;
 
     public Champions(String name, int force, int defense) {
         this.name = name;
@@ -22,6 +24,10 @@ public abstract class Champions implements IChampions {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getTypeChampion() { return typeChampion; }
+
+    public void setTypeChampion(String typeChampion) { this.typeChampion = typeChampion; }
 
     public int getLife() {
         return life;
@@ -63,15 +69,21 @@ public abstract class Champions implements IChampions {
         this.protection = protection;
     }
 
+    public boolean isDoubleAtaque() { return doubleAtaque; }
+
+    public void setDoubleAtaque(boolean doubleAtaque) { this.doubleAtaque = doubleAtaque; }
+
     @Override
     public String toString() {
         return "Champions{" +
                 "name='" + name + '\'' +
-                ", life=" + life +
+                ", typeChampion='" + typeChampion + '\'' +
                 ", force=" + force +
                 ", defense=" + defense +
+                ", life=" + life +
                 ", soin=" + soin +
                 ", protection=" + protection +
+                ", doubleAtaque=" + doubleAtaque +
                 '}';
     }
 }
