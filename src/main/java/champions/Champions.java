@@ -6,16 +6,14 @@ public abstract class Champions implements IChampions {
     private int life;
     private int force;
     private int defense;
-    private boolean soin;
-    private boolean protection;
+    private boolean soin = false;
+    private boolean protection = false;
 
-    public Champions(String name, int force, int defense, boolean soin, boolean protection) {
+    public Champions(String name, int force, int defense) {
         this.name = name;
         this.life = 100;
         this.force = force;
         this.defense = defense;
-        this.soin = soin;
-        this.protection = protection;
     }
 
     public String getName() {

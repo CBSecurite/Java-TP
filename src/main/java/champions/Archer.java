@@ -2,15 +2,15 @@ package champions;
 
 public class Archer extends Champions {
 
-    public Archer(String name, int force, int defense, boolean soin, boolean protection) {
-        super(name, force, defense, soin, protection);
+    public Archer(String name, int force, int defense) {
+        super(name, force, defense);
     }
 
     public void attaque(Champions champions) {
         if(this != champions) {
             if(champions.isProtection()) {
                 champions.setProtection(false);
-                System.out.println(champions.getName() + " n'a subit aucun degat grace a sa protection");
+                System.out.println(champions.getName() + " n'a subit aucun degat grace a sa protection lors de l'attaque de " + this.getName());
             }
             else {
                 int degatSubit = this.getForce() - champions.getDefense();
