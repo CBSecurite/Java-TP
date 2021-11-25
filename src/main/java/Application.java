@@ -35,8 +35,10 @@ public class Application {
                         i--;
                         System.out.println("!!! " + joueur2.getName() + " a été tué par " + joueur1.getName() + " !!!! ");
                     }
+                    else {
+                        System.out.println("---> " + joueur2.getName() + " dispose de " + joueur2.getLife() + " point de vie");
+                    }
 
-                    System.out.println(joueur2.getName() + " dispose de " + joueur2.getLife() + " point de vie");
                 }
 
                 if(championsList.contains(joueur3)) {
@@ -48,8 +50,10 @@ public class Application {
                         i--;
                         System.out.println("!!! " + joueur3.getName() + " a été tué par " + joueur1.getName() + " !!!! ");
                     }
+                    else {
+                        System.out.println("---> " + joueur3.getName() + " dispose de " + joueur3.getLife() + " point de vie");
+                    }
 
-                    System.out.println(joueur3.getName() + " dispose de " + joueur3.getLife() + " point de vie");
                 }
 
                 Random r1 = new Random();
@@ -69,8 +73,10 @@ public class Application {
                         i--;
                         System.out.println("!!! " + joueur1.getName() + " a été tué par " + joueur2.getName() + " !!!! ");
                     }
+                    else {
+                        System.out.println("---> " + joueur1.getName() + " dispose de " + joueur1.getLife() + " point de vie");
+                    }
 
-                    System.out.println(joueur1.getName() + " dispose de " + joueur1.getLife() + " point de vie");
                 }
 
                 if(championsList.contains(joueur3)) {
@@ -84,8 +90,10 @@ public class Application {
                         i--;
                         System.out.println("!!! " + joueur3.getName() + " a été tué par " + joueur2.getName() + " !!!! ");
                     }
+                    else {
+                        System.out.println("---> " + joueur3.getName() + " dispose de " + joueur3.getLife() + " point de vie");
+                    }
 
-                    System.out.println(joueur3.getName() + " dispose de " + joueur3.getLife() + " point de vie");
                 }
 
                 Random r2a = new Random();
@@ -106,8 +114,10 @@ public class Application {
                         i--;
                         System.out.println("!!! " + joueur1.getName() + " a été tué par " + joueur3.getName() + " !!!! ");
                     }
+                    else {
+                        System.out.println("---> " + joueur1.getName() + " dispose de " + joueur1.getLife() + " point de vie");
+                    }
 
-                    System.out.println(joueur1.getName() + " dispose de " + joueur1.getLife() + " point de vie");
                 }
 
                 if(championsList.contains(joueur2)) {
@@ -119,8 +129,10 @@ public class Application {
                         i--;
                         System.out.println("!!! " + joueur2.getName() + " a été tué par " + joueur3.getName() + " !!!! ");
                     }
+                    else {
+                        System.out.println("---> " + joueur2.getName() + " dispose de " + joueur2.getLife() + " point de vie");
+                    }
 
-                    System.out.println(joueur2.getName() + " dispose de " + joueur2.getLife() + " point de vie");
                 }
 
                 Random r3 = new Random();
