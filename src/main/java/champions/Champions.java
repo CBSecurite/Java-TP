@@ -3,7 +3,7 @@ package champions;
 public abstract class Champions implements IChampions {
 
     private String name;
-    private int life;
+    private int life = 100;
     private int force;
     private int defense;
     private boolean soin = false;
@@ -11,7 +11,6 @@ public abstract class Champions implements IChampions {
 
     public Champions(String name, int force, int defense) {
         this.name = name;
-        this.life = 100;
         this.force = force;
         this.defense = defense;
     }
