@@ -8,7 +8,9 @@ public class Chevalier extends Champions {
     }
 
     public void attaque(Champions champions) {
+
         if(this != champions) {
+
             int degatSubit = this.getForce() - champions.getDefense();
 
             if(champions.isProtection()) {
@@ -20,9 +22,11 @@ public class Chevalier extends Champions {
             }
 
             else {
+
                 if(champions.isSoin()) {
                     degatSubit = degatSubit - 10;
                 }
+
                 int LifeMoinsDegatSubit = champions.getLife() - degatSubit;
                 champions.setLife(LifeMoinsDegatSubit);
                 System.out.println(this.getName() + " a attaqué " + champions.getName() + " et lui a fait subir " + degatSubit + " de dégat.");
