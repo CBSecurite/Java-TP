@@ -1,5 +1,7 @@
 package champions;
 
+import java.util.Random;
+
 public class Chevalier extends Champions {
 
     public Chevalier(String name, int force, int defense) {
@@ -11,7 +13,9 @@ public class Chevalier extends Champions {
 
         if(this != champions) {
 
-            int degatSubit = this.getForce() - champions.getDefense();
+            Random initialRandomAttaque = new Random();
+            int randomAttaque = initialRandomAttaque.nextInt(20);
+            int degatSubit = (this.getForce() + randomAttaque) - champions.getDefense();
             String infoSoin = "";
 
             if(champions.isProtection()) {

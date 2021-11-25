@@ -1,6 +1,7 @@
 package champions;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class Mage extends Champions {
 
@@ -14,7 +15,9 @@ public class Mage extends Champions {
 
         if(this != champions) {
 
-            int degatSubit = this.getForce() - champions.getDefense();
+            Random initialRandomAttaque = new Random();
+            int randomAttaque = initialRandomAttaque.nextInt(20);
+            int degatSubit = (this.getForce() + randomAttaque) - champions.getDefense();
 
             if(champions.isProtection()) {
 
