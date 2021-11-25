@@ -3,9 +3,9 @@ package champions;
 public abstract class Champions implements IChampions {
 
     private String name;
-    private int life = 100;
     private int force;
     private int defense;
+    private int life = 100;
     private boolean soin = false;
     private boolean protection = false;
 

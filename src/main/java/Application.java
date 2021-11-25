@@ -18,6 +18,7 @@ public class Application {
         championsList.add(mage);
 
         int i = 3;
+
         while (i > 1) {
 
             Random InitialChampionRandom = new Random();
@@ -29,7 +30,7 @@ public class Application {
                     if (archer.getLife() <= 0) {
                         championsList.remove(archer);
                         i--;
-                        System.out.println(archer.getName() + " est mort !!!!");
+                        System.out.println(archer.getName() + " a été tué par " + chevallier.getName() + " !!!! ");
                     }
                     System.out.println(archer.getName() + " dispose de " + archer.getLife() + " point de vie");
                 }
@@ -38,7 +39,7 @@ public class Application {
                     if (mage.getLife() <= 0) {
                         championsList.remove(mage);
                         i--;
-                        System.out.println(mage.getName() + " est mort !!!!");
+                        System.out.println(mage.getName() + " a été tué par " + chevallier.getName() + " !!!! ");
                     }
                     System.out.println(mage.getName() + " dispose de " + mage.getLife() + " point de vie");
                 }
@@ -55,7 +56,7 @@ public class Application {
                     if (chevallier.getLife() <= 0) {
                         championsList.remove(chevallier);
                         i--;
-                        System.out.println(chevallier.getName() + " est mort !!!!");
+                        System.out.println(chevallier.getName() + " a été tué par " + archer.getName() + " !!!! ");
                     }
                     System.out.println(chevallier.getName() + " dispose de " + chevallier.getLife() + " point de vie");
                 }
@@ -64,7 +65,7 @@ public class Application {
                     if (mage.getLife() <= 0) {
                         championsList.remove(mage);
                         i--;
-                        System.out.println(mage.getName() + " est mort !!!!");
+                        System.out.println(mage.getName() + " a été tué par " + archer.getName() + " !!!! ");
                     }
                     System.out.println(mage.getName() + " dispose de " + mage.getLife() + " point de vie");
                 }
@@ -76,7 +77,7 @@ public class Application {
                     if (chevallier.getLife() <= 0) {
                         championsList.remove(chevallier);
                         i--;
-                        System.out.println(chevallier.getName() + " est mort !!!!");
+                        System.out.println(chevallier.getName() + " a été tué par " + mage.getName() + " !!!! ");
                     }
                     System.out.println(chevallier.getName() + " dispose de " + chevallier.getLife() + " point de vie");
                 }
@@ -85,7 +86,7 @@ public class Application {
                     if (archer.getLife() <= 0) {
                         championsList.remove(archer);
                         i--;
-                        System.out.println(archer.getName() + " est mort !!!!");
+                        System.out.println(archer.getName() + " a été tué par " + mage.getName() + " !!!! ");
                     }
                     System.out.println(archer.getName() + " dispose de " + archer.getLife() + " point de vie");
                 }
@@ -93,7 +94,7 @@ public class Application {
 
         }
         if(i == 1) {
-            System.out.println("Le gagnant est " + championsList.get(0).getName());
+            System.out.println("!!! Le gagnant du combat est : " + championsList.get(0).getName() + " !!!");
         }
     }
 }
