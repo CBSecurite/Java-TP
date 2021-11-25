@@ -32,11 +32,6 @@ public class Mage extends Champions {
                 champions.setProtection(false);
             }
             else {
-
-                if(champions.isSoin()) {
-                    degatSubit = degatSubit - 10;
-                }
-
                 int LifeMoinsDegatSubit = champions.getLife() - degatSubit;
                 champions.setLife(LifeMoinsDegatSubit);
                 System.out.println(this.getName() + " a attaqué " + champions.getName() + " et lui a fait subir " + degatSubit + " de dégat.");

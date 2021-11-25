@@ -8,14 +8,14 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Champions chevalier = new Chevalier("Serval", 30, 10);
-        Champions archer = new Archer("Ramone", 25, 8);
-        Champions mage = new Mage("Yaloupe", 15, 5);
+        Champions joueur1 = new Chevalier("Serval", 30, 10);
+        Champions joueur2 = new Archer("Ramone", 18, 15);
+        Champions joueur3 = new Mage("Yaloupe", 20, 5);
 
         List<Champions> championsList = new ArrayList<>();
-        championsList.add(chevalier);
-        championsList.add(archer);
-        championsList.add(mage);
+        championsList.add(joueur1);
+        championsList.add(joueur2);
+        championsList.add(joueur3);
 
         int i = 3;
 
@@ -24,107 +24,107 @@ public class Application {
             Random InitialChampionRandom = new Random();
             int championRandom = InitialChampionRandom.nextInt(4);
 
-            if(championsList.contains(chevalier) && championRandom == 1) {
+            if(championsList.contains(joueur1) && championRandom == 1) {
 
-                if(championsList.contains(archer)) {
+                if(championsList.contains(joueur2)) {
 
-                    chevalier.attaque(archer);
+                    joueur1.attaque(joueur2);
 
-                    if (archer.getLife() <= 0) {
-                        championsList.remove(archer);
+                    if (joueur2.getLife() <= 0) {
+                        championsList.remove(joueur2);
                         i--;
-                        System.out.println("!!! " + archer.getName() + " a été tué par " + chevalier.getName() + " !!!! ");
+                        System.out.println("!!! " + joueur2.getName() + " a été tué par " + joueur1.getName() + " !!!! ");
                     }
 
-                    System.out.println(archer.getName() + " dispose de " + archer.getLife() + " point de vie");
+                    System.out.println(joueur2.getName() + " dispose de " + joueur2.getLife() + " point de vie");
                 }
 
-                if(championsList.contains(mage)) {
+                if(championsList.contains(joueur3)) {
 
-                    chevalier.attaque(mage);
+                    joueur1.attaque(joueur3);
 
-                    if (mage.getLife() <= 0) {
-                        championsList.remove(mage);
+                    if (joueur3.getLife() <= 0) {
+                        championsList.remove(joueur3);
                         i--;
-                        System.out.println("!!! " + mage.getName() + " a été tué par " + chevalier.getName() + " !!!! ");
+                        System.out.println("!!! " + joueur3.getName() + " a été tué par " + joueur1.getName() + " !!!! ");
                     }
 
-                    System.out.println(mage.getName() + " dispose de " + mage.getLife() + " point de vie");
+                    System.out.println(joueur3.getName() + " dispose de " + joueur3.getLife() + " point de vie");
                 }
 
                 Random r1 = new Random();
-                if(r1.nextInt(2) == 1) { chevalier.setProtection(true); }
+                if(r1.nextInt(2) == 1) { joueur1.setProtection(true); }
             }
 
-            if(championsList.contains(archer) && championRandom == 2) {
+            if(championsList.contains(joueur2) && championRandom == 2) {
 
-                if(championsList.contains(chevalier)) {
+                if(championsList.contains(joueur1)) {
 
-                    archer.attaque(chevalier);
+                    joueur2.attaque(joueur1);
 
-                    if(archer.isDoubleAtaque()) { archer.attaque(chevalier); }
+                    if(joueur2.isDoubleAtaque()) { joueur2.attaque(joueur1); }
 
-                    if (chevalier.getLife() <= 0) {
-                        championsList.remove(chevalier);
+                    if (joueur1.getLife() <= 0) {
+                        championsList.remove(joueur1);
                         i--;
-                        System.out.println("!!! " + chevalier.getName() + " a été tué par " + archer.getName() + " !!!! ");
+                        System.out.println("!!! " + joueur1.getName() + " a été tué par " + joueur2.getName() + " !!!! ");
                     }
 
-                    System.out.println(chevalier.getName() + " dispose de " + chevalier.getLife() + " point de vie");
+                    System.out.println(joueur1.getName() + " dispose de " + joueur1.getLife() + " point de vie");
                 }
 
-                if(championsList.contains(mage)) {
+                if(championsList.contains(joueur3)) {
 
-                    archer.attaque(mage);
+                    joueur2.attaque(joueur3);
 
-                    if(archer.isDoubleAtaque()) { archer.attaque(mage); }
+                    if(joueur2.isDoubleAtaque()) { joueur2.attaque(joueur3); }
 
-                    if (mage.getLife() <= 0) {
-                        championsList.remove(mage);
+                    if (joueur3.getLife() <= 0) {
+                        championsList.remove(joueur3);
                         i--;
-                        System.out.println("!!! " + mage.getName() + " a été tué par " + archer.getName() + " !!!! ");
+                        System.out.println("!!! " + joueur3.getName() + " a été tué par " + joueur2.getName() + " !!!! ");
                     }
 
-                    System.out.println(mage.getName() + " dispose de " + mage.getLife() + " point de vie");
+                    System.out.println(joueur3.getName() + " dispose de " + joueur3.getLife() + " point de vie");
                 }
 
                 Random r2a = new Random();
-                if(r2a.nextInt(2) == 1) { archer.setProtection(true); }
+                if(r2a.nextInt(2) == 1) { joueur2.setProtection(true); }
 
                 Random r2b = new Random();
-                if(r2b.nextInt(2) == 1) { archer.setDoubleAtaque(true); }
+                if(r2b.nextInt(2) == 1) { joueur2.setDoubleAtaque(true); }
             }
 
-            if(championsList.contains(mage) && championRandom == 3) {
+            if(championsList.contains(joueur3) && championRandom == 3) {
 
-                if(championsList.contains(chevalier)) {
+                if(championsList.contains(joueur1)) {
 
-                    mage.attaque(chevalier);
+                    joueur3.attaque(joueur1);
 
-                    if (chevalier.getLife() <= 0) {
-                        championsList.remove(chevalier);
+                    if (joueur1.getLife() <= 0) {
+                        championsList.remove(joueur1);
                         i--;
-                        System.out.println("!!! " + chevalier.getName() + " a été tué par " + mage.getName() + " !!!! ");
+                        System.out.println("!!! " + joueur1.getName() + " a été tué par " + joueur3.getName() + " !!!! ");
                     }
 
-                    System.out.println(chevalier.getName() + " dispose de " + chevalier.getLife() + " point de vie");
+                    System.out.println(joueur1.getName() + " dispose de " + joueur1.getLife() + " point de vie");
                 }
 
-                if(championsList.contains(archer)) {
+                if(championsList.contains(joueur2)) {
 
-                    mage.attaque(archer);
+                    joueur3.attaque(joueur2);
 
-                    if (archer.getLife() <= 0) {
-                        championsList.remove(archer);
+                    if (joueur2.getLife() <= 0) {
+                        championsList.remove(joueur2);
                         i--;
-                        System.out.println("!!! " + archer.getName() + " a été tué par " + mage.getName() + " !!!! ");
+                        System.out.println("!!! " + joueur2.getName() + " a été tué par " + joueur3.getName() + " !!!! ");
                     }
 
-                    System.out.println(archer.getName() + " dispose de " + archer.getLife() + " point de vie");
+                    System.out.println(joueur2.getName() + " dispose de " + joueur2.getLife() + " point de vie");
                 }
 
                 Random r3 = new Random();
-                if(r3.nextInt(2) == 1) { mage.setProtection(true); }
+                if(r3.nextInt(2) == 1) { joueur3.setProtection(true); }
             }
 
         }
