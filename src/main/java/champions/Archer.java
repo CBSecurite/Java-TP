@@ -19,6 +19,9 @@ public class Archer extends Champions {
                 }
                 else {
                     degatSubit = degatSubit / 2;
+                    if(champions.isSoin()) {
+                        degatSubit = degatSubit - 10;
+                    }
                     int LifeMoinsDegatSubit = champions.getLife() - degatSubit;
                     champions.setLife(LifeMoinsDegatSubit);
                     System.out.println(champions.getName() + " n'a subit que la moitier des degats (" + degatSubit + ") grace a sa protection lors de l'attaque de " + this.getName());
