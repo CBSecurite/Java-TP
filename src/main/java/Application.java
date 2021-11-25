@@ -8,7 +8,7 @@ public class Application {
 
     public static void main(String[] args) {
 
-        Champions joueur1 = new Chevalier("Serval", 30, 10);
+        Champions joueur1 = new Chevalier("Serval", 30, 20);
         Champions joueur2 = new Archer("Ramone", 18, 15);
         Champions joueur3 = new Mage("Yaloupe", 20, 5);
 
@@ -41,7 +41,7 @@ public class Application {
 
                 }
 
-                if(championsList.contains(joueur3)) {
+                else if(championsList.contains(joueur3)) {
 
                     joueur1.attaque(joueur3);
 
@@ -60,7 +60,7 @@ public class Application {
                 if(r1.nextInt(2) == 1) { joueur1.setProtection(true); }
             }
 
-            if(championsList.contains(joueur2) && championRandom == 2) {
+            else if(championsList.contains(joueur2) && championRandom == 2) {
 
                 if(championsList.contains(joueur1)) {
 
@@ -79,7 +79,7 @@ public class Application {
 
                 }
 
-                if(championsList.contains(joueur3)) {
+                else if(championsList.contains(joueur3)) {
 
                     joueur2.attaque(joueur3);
 
@@ -103,7 +103,7 @@ public class Application {
                 if(r2b.nextInt(2) == 1) { joueur2.setDoubleAtaque(true); }
             }
 
-            if(championsList.contains(joueur3) && championRandom == 3) {
+            else if(championsList.contains(joueur3) && championRandom == 3) {
 
                 if(championsList.contains(joueur1)) {
 
@@ -120,7 +120,7 @@ public class Application {
 
                 }
 
-                if(championsList.contains(joueur2)) {
+                else if(championsList.contains(joueur2)) {
 
                     joueur3.attaque(joueur2);
 
